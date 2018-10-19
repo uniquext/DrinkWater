@@ -1,11 +1,38 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+
+    <style name="NavBar">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/nav_bar_height</item>
+        <item name="android:gravity">center_horizontal|bottom</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintHorizontal_bias">0.5</item>
+    </style>
+
+
+    <!--<style name="AppTabLayout" parent="Widget.Design.TabLayout">-->
+        <!--<item name="tabMaxWidth">20dp</item>-->
+        <!--<item name="tabIndicatorColor">?attr/colorAccent</item>-->
+        <!--<item name="tabIndicatorHeight">4dp</item>-->
+        <!--<item name="tabPaddingStart">6dp</item>-->
+        <!--<item name="tabPaddingEnd">6dp</item>-->
+        <!--<item name="tabBackground">?attr/selectableItemBackground</item>-->
+        <!--<item name="tabTextAppearance">@style/AppTabTextAppearance</item>-->
+        <!--<item name="tabSelectedTextColor">@color/colorAccent</item>-->
+    <!--</style>-->
+
+    <!--&lt;!&ndash; for text &ndash;&gt;-->
+    <!--<style name="AppTabTextAppearance" parent="TextAppearance.Design.Tab">-->
+        <!--<item name="android:textSize">12sp</item>-->
+        <!--<item name="android:textColor">@color/colorAccent</item>-->
+        <!--<item name="textAllCaps">false</item>-->
+    <!--</style>-->
+
 
 </resources>

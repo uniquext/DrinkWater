@@ -1,13 +1,29 @@
 package com.uniquext.android.drinkwater;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
-public class MainActivity extends AppCompatActivity {
+import com.uniquext.android.drinkwater.core.AbstractBaseActivity;
+import com.uniquext.android.drinkwater.core.LogUtil;
+
+public class MainActivity extends AbstractBaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    protected int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    protected void initView() {
+        LogUtil.d("initView");
+    }
+
+    @Override
+    protected void initData(Bundle savedInstanceState) {
+        LogUtil.e("MainActivity", "initData");
+    }
+
+    @Override
+    protected void initEvent() {
     }
 }
