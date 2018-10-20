@@ -4,6 +4,8 @@ import android.app.Application;
 import android.os.Process;
 import android.util.Log;
 
+import com.uniquext.android.drinkwater.util.LogUtil;
+
 /**
  * @author penghaitao
  * @version 1.0

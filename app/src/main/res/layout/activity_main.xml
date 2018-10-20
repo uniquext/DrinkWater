@@ -28,9 +28,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar" />
 
+    <include
+        layout="@layout/fragment_today"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/nav_bar_height"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:visibility="visible" />
+
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/label_today"
         style="@style/NavBar"
+        android:gravity="center"
         android:text="@string/today"
         app:layout_constraintEnd_toStartOf="@+id/label_plan"
         app:layout_constraintStart_toStartOf="parent" />
@@ -38,6 +51,7 @@
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/label_plan"
         style="@style/NavBar"
+        android:gravity="center"
         android:text="@string/plan"
         app:layout_constraintEnd_toStartOf="@+id/label_statistics"
         app:layout_constraintStart_toEndOf="@+id/label_today" />
@@ -45,6 +59,7 @@
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/label_statistics"
         style="@style/NavBar"
+        android:gravity="center"
         android:text="@string/statistics"
         app:layout_constraintEnd_toStartOf="@+id/label_others"
         app:layout_constraintStart_toEndOf="@+id/label_plan" />
@@ -52,6 +67,7 @@
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/label_others"
         style="@style/NavBar"
+        android:gravity="center"
         android:text="@string/others"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/label_statistics" />

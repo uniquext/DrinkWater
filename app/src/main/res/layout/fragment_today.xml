@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.uniquext.android.drinkwater.widget.RingView
+        android:id="@+id/ring_view"
+        android:layout_width="228dp"
+        android:layout_height="228dp"
+        app:insideColor="@color/colorPrimary"
+        app:insideRadius="90dp"
+        app:layout_constraintBottom_toTopOf="@+id/card_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:outColor="@color/colorPrimaryDark"
+        app:outRadius="114dp"
+        app:ringBackgroundColor="#999999"
+        app:percent="33.3" />
+
+    <View
+        android:id="@+id/view_ring_line"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        android:background="@color/underline"
+        app:layout_constraintBottom_toBottomOf="@id/ring_view"
+        app:layout_constraintEnd_toEndOf="@id/ring_view"
+        app:layout_constraintStart_toStartOf="@id/ring_view"
+        app:layout_constraintTop_toTopOf="@id/ring_view" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_percent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@id/view_ring_line"
+        app:layout_constraintEnd_toEndOf="@id/ring_view"
+        app:layout_constraintStart_toStartOf="@id/ring_view"
+        tools:text="33%" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_total_already_drink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@id/ring_view"
+        app:layout_constraintStart_toStartOf="@id/ring_view"
+        app:layout_constraintTop_toBottomOf="@id/view_ring_line"
+        tools:text="1000mL" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="230dp"
+        android:layout_height="100dp"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintBottom_toTopOf="@+id/view_drink_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ring_view">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|top"
+            android:layout_margin="10dp"
+            android:text="@string/remainder_tip"
+            android:textSize="20sp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_total_remainder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="10dp"
+            android:textSize="36sp"
+            tools:text="1050mL" />
+
+    </android.support.v7.widget.CardView>
+
+    <View
+        android:id="@+id/view_drink_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/nav_bar_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_view" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/iv_drink_100"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/drink_100"
+        app:layout_constraintBottom_toBottomOf="@id/view_drink_bar"
+        app:layout_constraintEnd_toStartOf="@+id/iv_drink_150"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_drink_bar" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/iv_drink_150"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/drink_150"
+        app:layout_constraintBottom_toBottomOf="@id/view_drink_bar"
+        app:layout_constraintEnd_toStartOf="@+id/iv_drink_200"
+        app:layout_constraintStart_toEndOf="@+id/iv_drink_100"
+        app:layout_constraintTop_toTopOf="@id/view_drink_bar" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/iv_drink_200"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/drink_200"
+        app:layout_constraintBottom_toBottomOf="@id/view_drink_bar"
+        app:layout_constraintEnd_toStartOf="@+id/iv_drink_water"
+        app:layout_constraintStart_toEndOf="@+id/iv_drink_150"
+        app:layout_constraintTop_toTopOf="@id/view_drink_bar" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/iv_drink_water"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/drink_water"
+        app:layout_constraintBottom_toBottomOf="@id/view_drink_bar"
+        app:layout_constraintEnd_toEndOf="@id/view_drink_bar"
+        app:layout_constraintStart_toEndOf="@+id/iv_drink_200"
+        app:layout_constraintTop_toTopOf="@id/view_drink_bar" />
+</android.support.constraint.ConstraintLayout>

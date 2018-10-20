@@ -2,6 +2,8 @@ package com.uniquext.android.drinkwater.core;
 
 import android.app.Activity;
 
+import com.uniquext.android.drinkwater.util.LogUtil;
+
 import java.util.LinkedList;
 
 /**
@@ -40,7 +42,7 @@ public final class AppManager {
      */
     protected void push(Activity activity) {
         activities.add(activity);
-        LogUtil.d(TAG, "Push:" + activity.getLocalClassName());
+        LogUtil.i(TAG, "Push:" + activity.getLocalClassName());
     }
 
     /**
@@ -50,7 +52,7 @@ public final class AppManager {
      */
     protected void remove(Activity activity) {
         activities.remove(activity);
-        LogUtil.d(TAG, "Remove  :" + activity.getLocalClassName());
+        LogUtil.i(TAG, "Remove  :" + activity.getLocalClassName());
     }
 
     /**
@@ -70,10 +72,9 @@ public final class AppManager {
      */
     public void exit() {
         for (Activity activity : activities) {
-            LogUtil.d(TAG, "finish :" + activity.getLocalClassName());
             activity.finish();
         }
-        LogUtil.d(TAG, "App was exited.");
+        LogUtil.i(TAG, "App was exited.");
         System.exit(0);
     }
 

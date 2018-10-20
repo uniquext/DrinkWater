@@ -33,7 +33,7 @@ public abstract class AbstractBaseActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
-    protected void onPreCreate(){
+    protected void onPreCreate() {
 
     }
 
@@ -41,7 +41,7 @@ public abstract class AbstractBaseActivity extends AppCompatActivity {
 
     }
 
-    protected void initToolBar(){
+    protected void initToolBar() {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }

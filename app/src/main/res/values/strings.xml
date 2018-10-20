@@ -5,4 +5,10 @@
     <string name="plan">计划</string>
     <string name="statistics">统计</string>
     <string name="others">其他</string>
+    
+    <string name="remainder_tip">今日还需要喝水</string>
+    <string name="drink_100">100ml</string>
+    <string name="drink_150">150ml</string>
+    <string name="drink_200">200ml</string>
+    <string name="drink_water">自定义</string>
 </resources>

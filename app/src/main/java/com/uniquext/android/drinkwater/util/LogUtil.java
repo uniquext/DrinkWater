@@ -1,4 +1,4 @@
-package com.uniquext.android.drinkwater.core;
+package com.uniquext.android.drinkwater.util;
 
 import android.util.Log;
 

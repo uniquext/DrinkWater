@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RingView">
+        <attr name="percent" format="float" />
+        <attr name="outColor" format="color" />
+        <attr name="insideColor" format="color" />
+        <attr name="ringBackgroundColor" format="color" />
+        <attr name="outRadius" format="dimension" />
+        <attr name="insideRadius" format="dimension" />
+    </declare-styleable>
+
+</resources>
