@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 
 import com.uniquext.android.drinkwater.core.AbstractBaseActivity;
 import com.uniquext.android.drinkwater.core.AbstractBaseFragment;
+import com.uniquext.android.drinkwater.plan.PlanFragment;
 import com.uniquext.android.drinkwater.today.TodayFragment;
 import com.uniquext.android.drinkwater.util.LogUtil;
 
@@ -30,7 +31,7 @@ public class MainActivity extends AbstractBaseActivity {
     protected void initData(Bundle savedInstanceState) {
         mFragments = new AbstractBaseFragment[]{
                 TodayFragment.newInstance(),
-                TodayFragment.newInstance(),
+                PlanFragment.newInstance(),
                 TodayFragment.newInstance(),
                 TodayFragment.newInstance()
         };

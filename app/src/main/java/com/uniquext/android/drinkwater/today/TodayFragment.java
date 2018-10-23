@@ -5,6 +5,7 @@ import android.view.View;
 
 import com.uniquext.android.drinkwater.R;
 import com.uniquext.android.drinkwater.core.AbstractBaseFragment;
+import com.uniquext.android.drinkwater.plan.helper.PlanManager;
 import com.uniquext.android.drinkwater.widget.RingView;
 
 import java.util.Locale;
@@ -17,7 +18,7 @@ import java.util.Locale;
  */
 public class TodayFragment extends AbstractBaseFragment {
 
-    private float mTotalWater = 1500;
+    private float mTotalWater;
 
     private RingView mRingView;
     private AppCompatTextView mTvPercent;
@@ -43,6 +44,7 @@ public class TodayFragment extends AbstractBaseFragment {
 
     @Override
     protected void initData() {
+        mTotalWater = PlanManager.getInstance().getTotal();
         refresh(33);
     }
 

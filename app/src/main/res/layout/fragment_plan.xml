@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/view_label_total_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="14dp"
+        android:gravity="center_vertical"
+        android:text="@string/label_plan_total"
+        android:textColor="@color/bar_labelTextColor"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/group_plan_total"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/view_label_total_bar" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/iv_icon_water"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintBottom_toBottomOf="@id/group_plan_total"
+        app:layout_constraintStart_toStartOf="@id/group_plan_total"
+        app:layout_constraintTop_toTopOf="@id/group_plan_total" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/label_total_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:text="@string/label_plan_total_description"
+        android:textColor="@color/colorTextLabel"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/group_plan_total"
+        app:layout_constraintStart_toEndOf="@id/iv_icon_water"
+        app:layout_constraintTop_toTopOf="@id/group_plan_total" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/et_total"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorTextLabel"
+        app:layout_constraintBottom_toBottomOf="@id/group_plan_total"
+        app:layout_constraintStart_toEndOf="@id/label_total_description"
+        app:layout_constraintTop_toTopOf="@id/group_plan_total"
+        tools:text="1234" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label_unit"
+        android:textColor="@color/colorTextLabel"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/group_plan_total"
+        app:layout_constraintStart_toEndOf="@id/et_total"
+        app:layout_constraintTop_toTopOf="@id/group_plan_total" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/view_label_time_bar"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginStart="14dp"
+        android:gravity="center_vertical"
+        android:text="@string/label_plan_time"
+        android:textColor="@color/bar_labelTextColor"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/group_plan_total" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_remind_time"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_label_time_bar" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_menu_plan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:src="@android:drawable/ic_menu_edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

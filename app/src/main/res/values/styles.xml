@@ -9,10 +9,11 @@
     </style>
 
     <style name="NavBar">
-        <item name="layout_constraintBottom_toBottomOf">parent</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">@dimen/nav_bar_height</item>
         <item name="layout_constraintHorizontal_bias">0.5</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="android:textColor">@color/colorTextLabel</item>
     </style>
 
     <!--<style name="AppTabLayout" parent="Widget.Design.TabLayout">-->

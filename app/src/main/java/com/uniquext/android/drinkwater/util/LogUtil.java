@@ -159,9 +159,9 @@ public final class LogUtil {
      * 日志输出调用所在堆栈节点
      * dalvik.system.VMStack    getThreadStackTrace
      * java.lang.Thread         getStackTrace
-     * com.uniquext.core.LogUtil   format
-     * com.uniquext.core.LogUtil   (String msg)
-     * com.uniquext.core.LogUtil   (String tag, String msg)
+     * com.uniquext.core.LogUtil    {@link #format(String)}
+     * com.uniquext.core.LogUtil    {@link #v(String)}
+     * com.uniquext.core.LogUtil    {@link #v(String, String)}
      * who invoking
      *
      * @return invoking StackTraceElement
