@@ -1,10 +1,8 @@
-package com.uniquext.android.drinkwater.core;
+package com.uniquext.android.core.base;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-
-import com.uniquext.android.drinkwater.R;
 
 /**
  * @author penghaitao
@@ -20,7 +18,6 @@ public abstract class AbstractBaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
         onPostCreate();
-        initToolBar();
         initView();
         initData(savedInstanceState);
         initEvent();
@@ -32,11 +29,6 @@ public abstract class AbstractBaseActivity extends AppCompatActivity {
 
     protected void onPostCreate() {
 
-    }
-
-    protected void initToolBar() {
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
     }
 
     protected abstract int getLayoutId();

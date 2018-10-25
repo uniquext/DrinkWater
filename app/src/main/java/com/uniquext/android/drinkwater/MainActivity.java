@@ -1,15 +1,20 @@
 package com.uniquext.android.drinkwater;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.Toolbar;
 
-import com.uniquext.android.drinkwater.core.AbstractBaseActivity;
-import com.uniquext.android.drinkwater.core.AbstractBaseFragment;
-import com.uniquext.android.drinkwater.plan.PlanFragment;
-import com.uniquext.android.drinkwater.today.TodayFragment;
-import com.uniquext.android.drinkwater.util.LogUtil;
+import com.uniquext.android.core.base.AbstractBaseActivity;
+import com.uniquext.android.core.base.AbstractBaseFragment;
+import com.uniquext.android.core.util.LogUtil;
+import com.uniquext.android.drinkwater.module.plan.PlanFragment;
+import com.uniquext.android.drinkwater.module.today.TodayFragment;
+import com.uniquext.android.drinkwater.core.AlarmService;
 
 public class MainActivity extends AbstractBaseActivity {
 
@@ -24,6 +29,8 @@ public class MainActivity extends AbstractBaseActivity {
 
     @Override
     protected void initView() {
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         mViewPager = findViewById(R.id.view_pager);
     }
 
@@ -48,7 +55,8 @@ public class MainActivity extends AbstractBaseActivity {
             }
         });
 
-
+        startService(new Intent(this, AlarmService.class));
+//        test();
     }
 
     @Override
@@ -69,5 +77,15 @@ public class MainActivity extends AbstractBaseActivity {
 
             }
         });
+    }
+
+    private void test() {
+        AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
+        Intent intent1 = new Intent();
+        intent1.setPackage(getPackageName());
+        intent1.setAction("com.uniquext.android.receiver.WATER_REMINDER");
+        intent1.putExtra("msg", "你该打酱油了1");
+        PendingIntent pi1 = PendingIntent.getBroadcast(this, 1, intent1, 0);
+        am.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(), 5 * 1000, pi1);
     }
 }

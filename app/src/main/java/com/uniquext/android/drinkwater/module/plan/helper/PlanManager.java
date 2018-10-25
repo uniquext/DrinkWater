@@ -1,6 +1,6 @@
-package com.uniquext.android.drinkwater.plan.helper;
+package com.uniquext.android.drinkwater.module.plan.helper;
 
-import com.uniquext.android.drinkwater.core.App;
+import com.uniquext.android.core.App;
 
 import java.util.List;
 

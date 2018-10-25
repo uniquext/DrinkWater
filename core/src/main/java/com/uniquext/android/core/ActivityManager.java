@@ -1,8 +1,6 @@
-package com.uniquext.android.drinkwater.core;
+package com.uniquext.android.core;
 
 import android.app.Activity;
-
-import com.uniquext.android.drinkwater.util.LogUtil;
 
 import java.util.LinkedList;
 

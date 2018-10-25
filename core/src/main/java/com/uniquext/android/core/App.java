@@ -1,10 +1,11 @@
-package com.uniquext.android.drinkwater.core;
+package com.uniquext.android.core;
 
 import android.app.Application;
 import android.os.Process;
 import android.util.Log;
 
-import com.uniquext.android.drinkwater.util.LogUtil;
+import com.uniquext.android.core.util.LogUtil;
+
 
 /**
  * @author penghaitao

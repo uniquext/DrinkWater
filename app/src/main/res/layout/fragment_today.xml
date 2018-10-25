@@ -17,8 +17,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:outColor="@color/colorPrimaryDark"
         app:outRadius="114dp"
-        app:ringBackgroundColor="#999999"
-        app:percent="33.3" />
+        app:percent="33.3"
+        app:ringBackgroundColor="#999999" />
 
     <View
         android:id="@+id/view_ring_line"

@@ -1,11 +1,11 @@
-package com.uniquext.android.drinkwater.today;
+package com.uniquext.android.drinkwater.module.today;
 
 import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
 
+import com.uniquext.android.core.base.AbstractBaseFragment;
 import com.uniquext.android.drinkwater.R;
-import com.uniquext.android.drinkwater.core.AbstractBaseFragment;
-import com.uniquext.android.drinkwater.plan.helper.PlanManager;
+import com.uniquext.android.drinkwater.module.plan.helper.PlanManager;
 import com.uniquext.android.drinkwater.widget.RingView;
 
 import java.util.Locale;

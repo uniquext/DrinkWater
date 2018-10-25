@@ -1,8 +1,8 @@
-package com.uniquext.android.drinkwater.util;
+package com.uniquext.android.core.util;
 
 import android.util.Log;
 
-import com.uniquext.android.drinkwater.BuildConfig;
+import com.uniquext.android.core.BuildConfig;
 
 import java.util.Locale;
 

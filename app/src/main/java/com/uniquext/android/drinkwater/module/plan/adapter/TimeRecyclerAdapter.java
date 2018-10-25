@@ -1,4 +1,4 @@
-package com.uniquext.android.drinkwater.plan.adapter;
+package com.uniquext.android.drinkwater.module.plan.adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.uniquext.android.drinkwater.R;
-import com.uniquext.android.drinkwater.plan.helper.PlanManager;
+import com.uniquext.android.drinkwater.module.plan.helper.PlanManager;
 
 import java.util.List;
 

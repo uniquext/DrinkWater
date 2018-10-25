@@ -3,7 +3,7 @@
     package="com.uniquext.android.drinkwater">
 
     <application
-        android:name=".core.App"
+        android:name="com.uniquext.android.core.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -17,6 +17,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name=".core.AlarmService" />
+
+        <receiver android:name=".core.AlarmReceiver">
+            <intent-filter>
+                <action android:name="com.uniquext.android.receiver.WATER_REMINDER" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

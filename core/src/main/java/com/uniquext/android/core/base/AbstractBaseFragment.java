@@ -1,4 +1,4 @@
-package com.uniquext.android.drinkwater.core;
+package com.uniquext.android.core.base;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

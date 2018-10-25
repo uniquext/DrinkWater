@@ -30,9 +30,11 @@ public class RingView extends View {
     private Paint mPaint = new Paint();
     private RectF mOuterRectF = new RectF();
     private RectF mInsideRectF = new RectF();
+
     public RingView(Context context) {
         this(context, null);
     }
+
     public RingView(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }

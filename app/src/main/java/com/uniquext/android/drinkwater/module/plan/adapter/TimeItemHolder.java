@@ -1,4 +1,4 @@
-package com.uniquext.android.drinkwater.plan.adapter;
+package com.uniquext.android.drinkwater.module.plan.adapter;
 
 import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatImageView;

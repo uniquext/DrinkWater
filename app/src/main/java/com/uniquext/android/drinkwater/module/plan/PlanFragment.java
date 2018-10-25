@@ -1,4 +1,4 @@
-package com.uniquext.android.drinkwater.plan;
+package com.uniquext.android.drinkwater.module.plan;
 
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.AppCompatEditText;
@@ -6,10 +6,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.uniquext.android.core.base.AbstractBaseFragment;
 import com.uniquext.android.drinkwater.R;
-import com.uniquext.android.drinkwater.core.AbstractBaseFragment;
-import com.uniquext.android.drinkwater.plan.adapter.TimeRecyclerAdapter;
-import com.uniquext.android.drinkwater.plan.helper.PlanManager;
+import com.uniquext.android.drinkwater.module.plan.adapter.TimeRecyclerAdapter;
+import com.uniquext.android.drinkwater.module.plan.helper.PlanManager;
 
 /**
  * @author penghaitao

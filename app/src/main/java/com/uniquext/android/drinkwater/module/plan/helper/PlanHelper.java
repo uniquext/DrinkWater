@@ -1,4 +1,4 @@
-package com.uniquext.android.drinkwater.plan.helper;
+package com.uniquext.android.drinkwater.module.plan.helper;
 
 import android.content.Context;
 
