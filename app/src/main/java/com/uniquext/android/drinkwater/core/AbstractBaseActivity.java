@@ -19,18 +19,11 @@ public abstract class AbstractBaseActivity extends AppCompatActivity {
         onPreCreate();
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
-        AppManager.getInstance().push(this);
         onPostCreate();
         initToolBar();
         initView();
         initData(savedInstanceState);
         initEvent();
-    }
-
-    @Override
-    protected void onDestroy() {
-        AppManager.getInstance().remove(this);
-        super.onDestroy();
     }
 
     protected void onPreCreate() {

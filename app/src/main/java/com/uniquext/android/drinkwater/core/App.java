@@ -29,6 +29,7 @@ public final class App extends Application {
         app = this;
         LogUtil.setLevel(Log.ERROR);
         initServiceOnWork();
+        registerActivityLifecycleCallbacks(new ActivityLifecycle());
     }
 
     /**
